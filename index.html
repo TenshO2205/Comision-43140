@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de compras | JavaScript</title>
+    <script src="https://kit.fontawesome.com/ba6f0b62a3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <div class="nav-container">
+        <nav class="navbar">
+            <img src="./assets/logos/logo.jpg" class="navbar-logo">
+            <i class="fa-solid fa-cart-shopping carrito" id="carrito-compra" style="color: #000000;"><span id="cantidadCarrito" class="cantidad-carrito"></span></i>
+        </nav>
+    </div>
 
-<script src="./main.js"></script>
+    <!-- container shop -->
+    
+    <div id="shop-container" class="shopContainer"></div>
 
+    <!-- modal container -->
+
+    <div id="modal-container" class="modal-container"></div>
+
+<script src="./JS/productos.js"></script>
+<script src="./JS/main.js"></script>
+<script src="./JS/carrito.js"></script>
 </body>
 </html>

@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Navbar */
+.nav-container{
+    position: sticky;
+    z-index: 8;
+    top: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    background-color: #b494bc;
+}
+
+.navbar-logo{
+    width: 6.25rem;
+    height: 6.25rem;
+}
+
+.input-search{
+    width: 40%;
+    height: 3.125rem;
+    text-align: center;
+}
+
+.navbar i{
+    font-size: 1.5625rem;
+    margin-right: 1.25rem;
+    cursor: pointer;
+}
+
+/* Cards */
+
+.shopContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 6.25rem;
+    margin-top: 1.875rem;
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+}
+
+.card{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 6px 10px 0  #b494bcaf;
+    max-width: 18.75rem;
+    margin: auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.card img{
+    width: 90%;
+    height: 15.625rem;
+}
+
+.precio{
+    font-size: 1.375rem;
+}
+
+.AgregarAlCarrito{
+    border: none;
+    outline: 0;
+    padding: .625rem;
+    color: #ffffff;
+    background-color: #b494bc;
+    text-align: center;
+    cursor: pointer;
+    width: 80%;
+    font-size: 1.125rem;
+}
+
+
+/* Modal del carrito */
+
+.modal-container{
+    width: 80%;
+    margin: .625rem 10%;
+    max-height: 88vh;
+    color: #000;
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+}
+
+.modal-container::-webkit-scrollbar{
+    display: none;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #b494bc;
+    color: #ffffff;
+    width: 100%;
+}
+
+.modal-header-titulo{
+    font-size: 2.5rem;
+    justify-self: start;
+}
+
+.close{
+    font-size: 1.5625rem;
+    cursor: pointer;
+}
+
+.eliminar-producto{
+    font-size: 1.5625rem;
+    cursor: pointer;
+    color: #ff0000;
+}
+
+.modal-container .modal-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: .900rem;
+}
+
+.sumar{
+    cursor: pointer;
+}
+
+.restar{
+    cursor: pointer;
+}
+
+.modal-container div img{
+    height: 7.5rem;
+    width: 7.5rem;
+}
+
+.total-content{
+    background-color: #b494bc;
+    width: 100%;
+    font-size: 1.5625rem;
+    padding: 1.25rem;
+    text-align: center;
+    padding-top: 1.25rem;
+}
+
+
+/* globito flotante del carrito */
+.cantidad-carrito {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    top: 45px;
+    right: 14px;
+    position: absolute;
+    display: none;
+}
