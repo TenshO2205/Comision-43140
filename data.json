@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "nombre": "Pulsera 1",
+        "precio": 1000,
+        "img": "./assets/tematicas/producto1.jpg",
+        "category": "Pulseras",
+        "cantidad": 1
+    },
+    {
+        "id": 2,
+        "nombre": "Pulsera 2",
+        "precio": 1000,
+        "img": "./assets/tematicas/producto2.jpg",
+        "category": "Pulseras",
+        "cantidad": 1
+    },
+    {
+        "id": 3,
+        "nombre": "Pulsera 3",
+        "precio": 1000,
+        "img": "./assets/tematicas/producto3.jpg",
+        "category": "Pulseras",
+        "cantidad": 1
+    },
+    {
+        "id": 4,
+        "nombre": "Pulsera 4",
+        "precio": 1000,
+        "img": "./assets/tematicas/producto4.jpg",
+        "category": "Pulseras",
+        "cantidad": 1
+    },
+    {
+        "id": 5,
+        "nombre": "Pulsera 5",
+        "precio": 1000,
+        "img": "./assets/tematicas/producto5.jpg",
+        "category": "Pulseras",
+        "cantidad": 1
+    },
+    {
+        "id": 6,
+        "nombre": "Pulsera 6",
+        "precio": 1000,
+        "img": "./assets/tematicas/producto6.jpg",
+        "category": "Pulseras",
+        "cantidad": 1
+    },
+    {
+        "id": 7,
+        "nombre": "Pulsera 7",
+        "precio": 1000,
+        "img": "./assets/tematicas/producto7.jpg",
+        "category": "Pulseras",
+        "cantidad": 1
+    },
+    {
+        "id": 8,
+        "nombre": "Pulsera 8",
+        "precio": 1000,
+        "img": "./assets/tematicas/producto8.jpg",
+        "category": "Pulseras",
+        "cantidad": 1
+    },
+    {
+        "id": 9,
+        "nombre": "Pulsera 9",
+        "precio": 1000,
+        "img": "./assets/tematicas/producto9.jpg",
+        "category": "Pulseras",
+        "cantidad": 1
+    },
+    {
+        "id": 10,
+        "nombre": "Pulsera 10",
+        "precio": 1000,
+        "img": "./assets/tematicas/producto10.jpg",
+        "category": "Pulseras",
+        "cantidad": 1
+    },
+    {
+        "id": 11,
+        "nombre": "Cadena 1",
+        "precio": 1000,
+        "img": "./assets/cadenas/cadenas1.jpg",
+        "category": "Cadenas",
+        "cantidad": 1
+    },
+    {
+        "id": 12,
+        "nombre": "Cadena 2",
+        "precio": 1000,
+        "img": "./assets/cadenas/cadenas2.jpg",
+        "category": "Cadenas",
+        "cantidad": 1
+    },
+    {
+        "id": 13,
+        "nombre": "Cadena 3",
+        "precio": 1000,
+        "img": "./assets/cadenas/cadenas3.jpg",
+        "category": "Cadenas",
+        "cantidad": 1
+    },
+    {
+        "id": 14,
+        "nombre": "Cadena 4",
+        "precio": 1000,
+        "img": "./assets/cadenas/cadenas4.jpg",
+        "category": "Cadenas",
+        "cantidad": 1
+    },
+    {
+        "id": 15,
+        "nombre": "Cadena 5",
+        "precio": 1000,
+        "img": "./assets/cadenas/cadenas5.jpg",
+        "category": "Cadenas",
+        "cantidad": 1
+    },
+    {
+        "id": 16,
+        "nombre": "Cadena 6",
+        "precio": 1000,
+        "img": "./assets/cadenas/cadenas6.jpg",
+        "category": "Cadenas",
+        "cantidad": 1
+    },
+    {
+        "id": 17,
+        "nombre": "Cadena 7",
+        "precio": 1000,
+        "img": "./assets/cadenas/cadenas7.jpg",
+        "category": "Cadenas",
+        "cantidad": 1
+    },
+    {
+        "id": 18,
+        "nombre": "Cadena 8",
+        "precio": 1000,
+        "img": "./assets/cadenas/cadenas8.jpg",
+        "category": "Cadenas",
+        "cantidad": 1
+    },
+    {
+        "id": 19,
+        "nombre": "Cadena 9",
+        "precio": 1000,
+        "img": "./assets/cadenas/cadenas9.jpg",
+        "category": "Cadenas",
+        "cantidad": 1
+    },
+    {
+        "id": 20,
+        "nombre": "Cadena 10",
+        "precio": 1000,
+        "img": "./assets/cadenas/cadenas10.jpg",
+        "category": "Cadenas",
+        "cantidad": 1
+    },
+    {
+        "id": 21,
+        "nombre": "Insumo 1",
+        "precio": 1000,
+        "img": "./assets/insumos/insumo1.jpg",
+        "category": "Insumos",
+        "cantidad": 1
+    },
+    {
+        "id": 22,
+        "nombre": "Insumo 2",
+        "precio": 1000,
+        "img": "./assets/insumos/insumo2.jpg",
+        "category": "Insumos",
+        "cantidad": 1
+    },
+    {
+        "id": 23,
+        "nombre": "Insumo 3",
+        "precio": 1000,
+        "img": "./assets/insumos/insumo3.jpg",
+        "category": "Insumos",
+        "cantidad": 1
+    },
+    {
+        "id": 24,
+        "nombre": "Insumo 4",
+        "precio": 1000,
+        "img": "./assets/insumos/insumo4.jpg",
+        "category": "Insumos",
+        "cantidad": 1
+    },
+    {
+        "id": 25,
+        "nombre": "Insumo 5",
+        "precio": 1000,
+        "img": "./assets/insumos/insumo5.jpg",
+        "category": "Insumos",
+        "cantidad": 1
+    },
+    {
+        "id": 26,
+        "nombre": "Insumo 6",
+        "precio": 1000,
+        "img": "./assets/insumos/insumo6.jpg",
+        "category": "Insumos",
+        "cantidad": 1
+    },
+    {
+        "id": 27,
+        "nombre": "Insumo 7",
+        "precio": 1000,
+        "img": "./assets/insumos/insumo7.jpg",
+        "category": "Insumos",
+        "cantidad": 1
+    },
+    {
+        "id": 28,
+        "nombre": "Insumo 8",
+        "precio": 1000,
+        "img": "./assets/insumos/insumo8.jpg",
+        "category": "Insumos",
+        "cantidad": 1
+    },
+    {
+        "id": 29,
+        "nombre": "Insumo 9",
+        "precio": 1000,
+        "img": "./assets/insumos/insumo9.jpg",
+        "category": "Insumos",
+        "cantidad": 1
+    },
+    {
+        "id": 30,
+        "nombre": "Insumo 10",
+        "precio": 1000,
+        "img": "./assets/insumos/insumo10.jpg",
+        "category": "Insumos",
+        "cantidad": 1
+    }
+]

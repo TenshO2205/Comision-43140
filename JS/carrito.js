@@ -1,15 +1,16 @@
+// Funcion para diseñar y mostrar el carrito de compras
 const diseñoCarrito = () => {
     modalContainer.innerHTML = "";
     modalContainer.style.display = "flex";
 
-    //Este tramo lo que hace es crear el header del carrito de compras
+    // Este tramo lo que hace es crear el header del carrito de compras
     const modalHeader = document.createElement("div")
     modalHeader.className = "modal-header"
     modalHeader.innerHTML = `
     <h1 class="modal-header-titulo">Carrito</h1>
     `;
     modalContainer.append(modalHeader);
-
+    // Este tramo crea el boton del cierre del carrito
     const modalBtn = document.createElement("i")
     modalBtn.className = "fa-solid fa-xmark close"
 
@@ -18,7 +19,7 @@ const diseñoCarrito = () => {
     })
     modalHeader.append(modalBtn);
 
-    //Este tramo lo que hace es crear el main del carrito.
+    // Este tramo lo que hace es crear el main del carrito.
     carrito.forEach((product)=>{
         let carritoContent = document.createElement("div")
         carritoContent.className = "modal-content"
@@ -34,7 +35,7 @@ const diseñoCarrito = () => {
         `
         modalContainer.append(carritoContent);
 
-        //Este tramo lo que hago es sumar y restar los valores de la cantidades.
+        // Este tramo lo que hago es sumar y restar los valores de la cantidades.
         let restar = carritoContent.querySelector(".restar")
         restar.addEventListener("click", () =>{
             if(product.cantidad !== 1){
@@ -51,36 +52,89 @@ const diseñoCarrito = () => {
             diseñoCarrito()
         })
 
-        /*Este código está configurando un evento de clic en un elemento con la clase eliminar-producto dentro de un contenedor con el ID carritoContent*/
+        // Evento que se usa para eliminar productos del carrito
         let eliminar = carritoContent.querySelector(".eliminar-producto")
         eliminar.addEventListener("click", () =>{
             eliminarProducto(product.id)
         })
     });
 
-    //Este codigo lo que hace es sumar el total de la compra y crea el footer del carrito.
+    // Este tramo lo que hace es sumar el total de la compra y crea el footer del carrito.
     const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
     const totalFinal = document.createElement("div")
     totalFinal.className = "total-content"
-    totalFinal.innerHTML = `<h3>Total a pagar: $ ${total}</h3>`
+    totalFinal.innerHTML = `
+    <h3>Total a pagar: $ ${total}</h3>
+    <button class="btn-total">Comprar</button>
+    `;
     modalContainer.append(totalFinal)
+
+    // Evento de compra al boton de compra
+    const comprarBtn = totalFinal.querySelector(".btn-total");
+    comprarBtn.addEventListener("click", () =>{
+        if(carrito.length === 0){
+            comprarBtn.addEventListener("click", () =>{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'No tienes productos en el carrito!',
+                })
+            })
+        } else{
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Compra realizada, muchas gracias!',
+                showConfirmButton: false,
+                timer: 1500
+            })
+            vaciarCarrito();
+        }
+    });
 }
 
-carritoCompra.addEventListener("click",diseñoCarrito)
 
-// Este codigo lo que hace es eliminar el producto que esta en el carrito de compras
-const eliminarProducto = (id) => {
-    const foundId = carrito.find((element) => element.id === id)
-
-    carrito = carrito.filter((carritoId) => {
-        return carritoId !== foundId; 
-    })
-    contadorCarrito();
-    saveLocal();
-    diseñoCarrito();
+// Funcion para vaciar el carrito
+const vaciarCarrito = () => {
+    carrito = []; // Vacia el carrito
+    saveLocal(); // Guarda cambios en localStorage
+    diseñoCarrito(); // Actualiza la visualización del carrito
+    contadorCarrito(); // Actualiza el contador del carrito
 };
 
-/*Este tramo de codigo lo que hace es que aparezca el globo del carrito con la cantidad de productos y que la cantidad se almacene el localstorage*/
+// Muestra el carrito al hacer clic en el carrito del header
+carritoCompra.addEventListener("click",diseñoCarrito)
+
+// Este tramo lo que hace es eliminar el producto que esta en el carrito de compras
+const eliminarProducto = (id) => {
+    Swal.fire({
+        title: '¿Estás seguro?',
+        text: 'Esto eliminará el producto del carrito',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#008000',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, eliminar',
+        backdrop: 'rgba(180,148,188,0.8)'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const foundIndex = carrito.findIndex((element) => element.id === id);
+            Swal.fire(
+                'Borrado',
+                'Producto eliminado del carrito!',
+                'success',
+            )
+
+            if (foundIndex !== -1) {
+                carrito.splice(foundIndex, 1);
+                contadorCarrito();
+                saveLocal();
+                diseñoCarrito();
+            }
+        }
+    });
+};
+
+// Funcion para actulizar el contador del carrito
 const contadorCarrito = () => {
     cantidadCarrito.style.display = "block"
 
